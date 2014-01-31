@@ -5,7 +5,8 @@
 //  Created by Nicolas Goutaland on 16/04/11.
 //  Copyright 2011 Nicolas Goutaland. All rights reserved.
 //
-
+#ifndef __LazyProperty__H__
+#define __LazyProperty__H__
 /* Macro used to generate a lazy instanciation property. Property have to be a suclass of NSObject. 
  * "constructor" selector will be used instead of "init" one. If nil, init will be used instead.
  * If a method called "configure" + property (With first letter as uppercase) exists, it will be automatically called
@@ -32,3 +33,4 @@ _Pragma("clang diagnostic pop") \
 
 /* Return the class of a given property name. If not a class or class cannot be found, nil will be returned */
 Class classFromPropertyName(const char *cPropertyName, Class aClass);
+#endif

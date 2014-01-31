@@ -4,6 +4,8 @@
 //
 //  Created by Nicolas Goutaland on 16/04/11.
 //  Copyright 2011 Nicolas Goutaland. All rights reserved.
+#ifndef __LazyProperty__M__
+#define __LazyProperty__M__
 
 #import "LazyProperty.h"
 #import <objc/runtime.h>
@@ -61,3 +63,4 @@ Class classFromPropertyName(const char *cPropertyName, Class aClass)
 	// Return built class
 	return NSClassFromString(className);
 }
+#endif
