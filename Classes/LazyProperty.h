@@ -10,14 +10,15 @@
  * "constructor" selector will be used instead of "init" one. If nil, init will be used instead.
  * If a method called "configure" + property (With first letter as uppercase) exists, it will be automatically called
  */
-#define PZ_LAZY_PROPERTY_CUSTOM_SELECTOR(property, constructor, object) \
+#define LAZY_PROPERTY_CUSTOM_SELECTOR(property, constructor, object) \
 - (id)property { \
 _Pragma("clang diagnostic push") \
 _Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
     if (_ ## property) return _ ## property; \
         _ ## property = [[classFromPropertyName(#property, [self class]) alloc] performSelector:(constructor ? constructor : @selector(init)) withObject:object]; \
 \
-    NSString *configureMethod = [@"configure" stringByAppendingString:[@#property stringUcFirst]];\
+    NSString *propertyName = @#property;\
+    NSString *configureMethod = [@"configure" stringByAppendingString:[NSString stringWithFormat:@"%@%@", [[propertyName substringToIndex:1] uppercaseString], [propertyName substringFromIndex:1]]];\
     SEL selector = NSSelectorFromString(configureMethod);\
 \
     if ([self respondsToSelector:selector])\
@@ -27,7 +28,7 @@ _Pragma("clang diagnostic pop") \
 }
 
 /* Macro used to generate a lazy instanciation property. Property have to be a suclass of NSObject */
-#define LAZY_PROPERTY(property) PZ_LAZY_PROPERTY_CUSTOM_SELECTOR(property, nil, nil)
+#define LAZY_PROPERTY(property) LAZY_PROPERTY_CUSTOM_SELECTOR(property, nil, nil)
 
 /* Return the class of a given property name. If not a class or class cannot be found, nil will be returned */
 Class classFromPropertyName(const char *cPropertyName, Class aClass);

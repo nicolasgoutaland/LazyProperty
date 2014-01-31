@@ -7,32 +7,55 @@
 //
 
 #import "RootViewController.h"
+#import "SimpleViewController.h"
 
 @interface RootViewController ()
-
+@property (nonatomic, strong) SimpleViewController *simpleViewController;
+@property (nonatomic, strong) SimpleViewController *simpleViewControllerCustomSelector;
+@property (nonatomic, strong) SimpleViewController *simpleViewControllerEmbedded;
+@property (nonatomic, strong) UINavigationController *embeddedNavigationController;
 @end
 
 @implementation RootViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+#pragma mark - UI Actions
+- (IBAction)simpleLazy:(id)sender
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    [self presentViewController:self.simpleViewController
+                       animated:YES
+                     completion:nil];
 }
 
-- (void)viewDidLoad
+- (IBAction)simpleCustomLazy:(id)sender
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self presentViewController:self.simpleViewControllerCustomSelector
+                       animated:YES
+                     completion:nil];
 }
 
-- (void)didReceiveMemoryWarning
+- (IBAction)cascadeLazy:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self presentViewController:self.embeddedNavigationController
+                       animated:YES
+                     completion:nil];
 }
 
+#pragma mark - Configuration methods
+// This methods will be autotriggered when simpleViewController will be instantiated
+- (void)configureSimpleViewController
+{
+    // This methods will be called only once, so you can perform initial configuration here
+    _simpleViewController.view.backgroundColor = [UIColor greenColor];
+}
+
+// This methods will be autotriggered when simpleViewControllerCustomSelector will be instantiated
+- (void)configureSimpleViewControllerCustomSelector
+{
+    // This methods will be called only once, so you can perform initial configuration here
+    _simpleViewControllerCustomSelector.view.backgroundColor = [UIColor redColor];
+}
+
+LAZY_PROPERTY(simpleViewController);
+LAZY_PROPERTY(simpleViewControllerEmbedded);
+LAZY_PROPERTY_CUSTOM_SELECTOR(simpleViewControllerCustomSelector, @selector(initWithInitialCount:), @(999));
+LAZY_PROPERTY_CUSTOM_SELECTOR(embeddedNavigationController, @selector(initWithRootViewController:), self.simpleViewControllerEmbedded);
 @end

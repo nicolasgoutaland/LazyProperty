@@ -20,6 +20,14 @@
 		5C59ECF8189AC68B00645CDF /* LazyPropertyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59ECF7189AC68B00645CDF /* LazyPropertyTests.m */; };
 		5C59ED06189AC72E00645CDF /* LazyProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59ED05189AC72E00645CDF /* LazyProperty.m */; };
 		5C59ED07189AC72E00645CDF /* LazyProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59ED05189AC72E00645CDF /* LazyProperty.m */; };
+		5C59ED0E189ACB0000645CDF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59ED0C189ACB0000645CDF /* RootViewController.m */; };
+		5C59ED0F189ACB0000645CDF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59ED0C189ACB0000645CDF /* RootViewController.m */; };
+		5C59ED10189ACB0000645CDF /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C59ED0D189ACB0000645CDF /* RootViewController.xib */; };
+		5C59ED11189ACB0000645CDF /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C59ED0D189ACB0000645CDF /* RootViewController.xib */; };
+		5C59ED17189ACD0A00645CDF /* SimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59ED15189ACD0A00645CDF /* SimpleViewController.m */; };
+		5C59ED18189ACD0A00645CDF /* SimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59ED15189ACD0A00645CDF /* SimpleViewController.m */; };
+		5C59ED19189ACD0A00645CDF /* SimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C59ED16189ACD0A00645CDF /* SimpleViewController.xib */; };
+		5C59ED1A189ACD0A00645CDF /* SimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C59ED16189ACD0A00645CDF /* SimpleViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +58,12 @@
 		5C59ECF7189AC68B00645CDF /* LazyPropertyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LazyPropertyTests.m; sourceTree = "<group>"; };
 		5C59ED04189AC72E00645CDF /* LazyProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyProperty.h; sourceTree = "<group>"; };
 		5C59ED05189AC72E00645CDF /* LazyProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyProperty.m; sourceTree = "<group>"; };
+		5C59ED0B189ACB0000645CDF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		5C59ED0C189ACB0000645CDF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		5C59ED0D189ACB0000645CDF /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		5C59ED14189ACD0A00645CDF /* SimpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleViewController.h; sourceTree = "<group>"; };
+		5C59ED15189ACD0A00645CDF /* SimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleViewController.m; sourceTree = "<group>"; };
+		5C59ED16189ACD0A00645CDF /* SimpleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +172,8 @@
 		5C59ED02189AC70500645CDF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5C59ED13189ACCFD00645CDF /* Root */,
+				5C59ED12189ACCF500645CDF /* Simple */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -170,6 +186,26 @@
 			);
 			name = Lib;
 			path = ../Classes;
+			sourceTree = "<group>";
+		};
+		5C59ED12189ACCF500645CDF /* Simple */ = {
+			isa = PBXGroup;
+			children = (
+				5C59ED14189ACD0A00645CDF /* SimpleViewController.h */,
+				5C59ED15189ACD0A00645CDF /* SimpleViewController.m */,
+				5C59ED16189ACD0A00645CDF /* SimpleViewController.xib */,
+			);
+			name = Simple;
+			sourceTree = "<group>";
+		};
+		5C59ED13189ACCFD00645CDF /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				5C59ED0B189ACB0000645CDF /* RootViewController.h */,
+				5C59ED0C189ACB0000645CDF /* RootViewController.m */,
+				5C59ED0D189ACB0000645CDF /* RootViewController.xib */,
+			);
+			name = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +283,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C59ED19189ACD0A00645CDF /* SimpleViewController.xib in Resources */,
+				5C59ED10189ACB0000645CDF /* RootViewController.xib in Resources */,
 				5C59ECDD189AC68B00645CDF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +293,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C59ED1A189ACD0A00645CDF /* SimpleViewController.xib in Resources */,
+				5C59ED11189ACB0000645CDF /* RootViewController.xib in Resources */,
 				5C59ECF6189AC68B00645CDF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,8 +306,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C59ED17189ACD0A00645CDF /* SimpleViewController.m in Sources */,
 				5C59ECE3189AC68B00645CDF /* AppDelegate.m in Sources */,
 				5C59ECDF189AC68B00645CDF /* main.m in Sources */,
+				5C59ED0E189ACB0000645CDF /* RootViewController.m in Sources */,
 				5C59ED06189AC72E00645CDF /* LazyProperty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +320,8 @@
 			files = (
 				5C59ED07189AC72E00645CDF /* LazyProperty.m in Sources */,
 				5C59ECF8189AC68B00645CDF /* LazyPropertyTests.m in Sources */,
+				5C59ED18189ACD0A00645CDF /* SimpleViewController.m in Sources */,
+				5C59ED0F189ACB0000645CDF /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

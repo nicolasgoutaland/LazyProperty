@@ -9,30 +9,51 @@
 #import "SimpleViewController.h"
 
 @interface SimpleViewController ()
+// Outlets
+@property (nonatomic, weak) IBOutlet UILabel *countLabel;
 
+// Data
+@property (nonatomic, assign) NSInteger displayCount;
 @end
 
 @implementation SimpleViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+#pragma mark - Constructor
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    if (self = [super initWithNibName:@"SimpleViewController" bundle:nil])
+    {
+        _displayCount = 0;
     }
+    
     return self;
 }
 
-- (void)viewDidLoad
+- (id)initWithInitialCount:(NSNumber *)initialCount
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    if (self = [super initWithNibName:@"SimpleViewController" bundle:nil])
+    {
+        _displayCount = [initialCount intValue];
+    }
+
+    return self;
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark - View management
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super viewWillAppear:animated];
+
+    // Update display count
+    _displayCount++;
+
+    // Refresh label
+    _countLabel.text = [NSString stringWithFormat:@"%d", _displayCount];
 }
 
+#pragma mark - UI Actions
+- (IBAction)close:(id)sender
+{
+    [self dismissViewControllerAnimated:YES
+                             completion:nil];
+}
 @end

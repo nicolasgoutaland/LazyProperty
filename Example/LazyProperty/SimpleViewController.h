@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SimpleViewController : UIViewController
-
+/* Custom selector allowing to set an initial count */
+- (id)initWithInitialCount:(NSNumber *)initialCount;
 @end
