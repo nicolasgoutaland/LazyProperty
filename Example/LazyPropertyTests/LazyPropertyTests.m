@@ -26,6 +26,16 @@
     [super tearDown];
 }
 
+#warning TODO : Test with _ivar == nil
+#warning TODO : Test with self.ivar != nil
+#warning TODO : Test with self.ivar == _previousivar
+#warning TODO : Test with [self.ivar class] == class
+#warning TODO : Test with self.ivar id not instantiated
+#warning TODO : Test with self.ivar and custom selector triggered
+#warning TODO : Test with self.ivar = nil and _ivar == nil
+#warning TODO : Test with self.ivar and _ivar != nil && != _previousivar
+
+
 - (void)testExample
 {
     XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
