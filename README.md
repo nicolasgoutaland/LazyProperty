@@ -22,6 +22,15 @@ More information on lazy instanciation [on Wikipedia](http://en.wikipedia.org/wi
 
 ####Examples
 
+####Use case
+* View controller to be presented modally
+* View controller to be pushed after selecting a row in a table view, to display a detail
+* UserInfo NSMutableDictionary associated to a class
+* MoviePlayer used in a detailed view, needing customisation when initialised
+* ...
+
+Let me know if you have some other use cases
+
 ####Advantages
 * Type less, do more
 * Reduce amount of typed code
