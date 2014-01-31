@@ -44,7 +44,9 @@ Only __nonatomic__ __strong__ properties are supported.
 ####Installation
 __Manual__: Copy the __Classes__ folder in your project<br>
 
-`#import <LazyProperty.h>`
+Import header in your project. .pch is a good place ;)
+    
+    #import "LazyProperty.h"
 
 ####Team
 Nicolas Goutaland
