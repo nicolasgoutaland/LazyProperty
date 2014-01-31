@@ -13,25 +13,20 @@
 		5C59ECDD189AC68B00645CDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C59ECDB189AC68B00645CDF /* InfoPlist.strings */; };
 		5C59ECDF189AC68B00645CDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59ECDE189AC68B00645CDF /* main.m */; };
 		5C59ECE3189AC68B00645CDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59ECE2189AC68B00645CDF /* AppDelegate.m */; };
-		5C59ECEC189AC68B00645CDF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C59ECEB189AC68B00645CDF /* XCTest.framework */; };
-		5C59ECED189AC68B00645CDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C59ECD2189AC68B00645CDF /* Foundation.framework */; };
-		5C59ECEE189AC68B00645CDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C59ECD6189AC68B00645CDF /* UIKit.framework */; };
-		5C59ECF6189AC68B00645CDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C59ECF4189AC68B00645CDF /* InfoPlist.strings */; };
-		5C59ECF8189AC68B00645CDF /* LazyPropertyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59ECF7189AC68B00645CDF /* LazyPropertyTests.m */; };
 		5C59ED06189AC72E00645CDF /* LazyProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59ED05189AC72E00645CDF /* LazyProperty.m */; };
-		5C59ED07189AC72E00645CDF /* LazyProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59ED05189AC72E00645CDF /* LazyProperty.m */; };
 		5C59ED0E189ACB0000645CDF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59ED0C189ACB0000645CDF /* RootViewController.m */; };
-		5C59ED0F189ACB0000645CDF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59ED0C189ACB0000645CDF /* RootViewController.m */; };
 		5C59ED10189ACB0000645CDF /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C59ED0D189ACB0000645CDF /* RootViewController.xib */; };
-		5C59ED11189ACB0000645CDF /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C59ED0D189ACB0000645CDF /* RootViewController.xib */; };
 		5C59ED17189ACD0A00645CDF /* SimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59ED15189ACD0A00645CDF /* SimpleViewController.m */; };
-		5C59ED18189ACD0A00645CDF /* SimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59ED15189ACD0A00645CDF /* SimpleViewController.m */; };
 		5C59ED19189ACD0A00645CDF /* SimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C59ED16189ACD0A00645CDF /* SimpleViewController.xib */; };
-		5C59ED1A189ACD0A00645CDF /* SimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C59ED16189ACD0A00645CDF /* SimpleViewController.xib */; };
+		5C59ED20189BACC200645CDF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C59ECEB189AC68B00645CDF /* XCTest.framework */; };
+		5C59ED21189BACC200645CDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C59ECD2189AC68B00645CDF /* Foundation.framework */; };
+		5C59ED22189BACC200645CDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C59ECD6189AC68B00645CDF /* UIKit.framework */; };
+		5C59ED31189BAD3800645CDF /* LazyPropertyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59ECF7189AC68B00645CDF /* LazyPropertyTests.m */; };
+		5C59ED73189BAE3100645CDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C59ECF4189AC68B00645CDF /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5C59ECEF189AC68B00645CDF /* PBXContainerItemProxy */ = {
+		5C59ED2C189BACC200645CDF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5C59ECC7189AC68B00645CDF /* Project object */;
 			proxyType = 1;
@@ -51,7 +46,6 @@
 		5C59ECE0189AC68B00645CDF /* LazyProperty-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LazyProperty-Prefix.pch"; sourceTree = "<group>"; };
 		5C59ECE1189AC68B00645CDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5C59ECE2189AC68B00645CDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5C59ECEA189AC68B00645CDF /* LazyPropertyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPropertyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C59ECEB189AC68B00645CDF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5C59ECF3189AC68B00645CDF /* LazyPropertyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LazyPropertyTests-Info.plist"; sourceTree = "<group>"; };
 		5C59ECF5189AC68B00645CDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -64,6 +58,8 @@
 		5C59ED14189ACD0A00645CDF /* SimpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleViewController.h; sourceTree = "<group>"; };
 		5C59ED15189ACD0A00645CDF /* SimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleViewController.m; sourceTree = "<group>"; };
 		5C59ED16189ACD0A00645CDF /* SimpleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleViewController.xib; sourceTree = "<group>"; };
+		5C59ED1F189BACC200645CDF /* LazyPropertyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPropertyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C59ED74189BAEDA00645CDF /* LazyPropertyTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LazyPropertyTests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,13 +73,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5C59ECE7189AC68B00645CDF /* Frameworks */ = {
+		5C59ED1C189BACC200645CDF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C59ECEC189AC68B00645CDF /* XCTest.framework in Frameworks */,
-				5C59ECEE189AC68B00645CDF /* UIKit.framework in Frameworks */,
-				5C59ECED189AC68B00645CDF /* Foundation.framework in Frameworks */,
+				5C59ED20189BACC200645CDF /* XCTest.framework in Frameworks */,
+				5C59ED22189BACC200645CDF /* UIKit.framework in Frameworks */,
+				5C59ED21189BACC200645CDF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				5C59ECCF189AC68B00645CDF /* LazyProperty.app */,
-				5C59ECEA189AC68B00645CDF /* LazyPropertyTests.xctest */,
+				5C59ED1F189BACC200645CDF /* LazyPropertyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +153,7 @@
 			children = (
 				5C59ECF3189AC68B00645CDF /* LazyPropertyTests-Info.plist */,
 				5C59ECF4189AC68B00645CDF /* InfoPlist.strings */,
+				5C59ED74189BAEDA00645CDF /* LazyPropertyTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -228,22 +225,22 @@
 			productReference = 5C59ECCF189AC68B00645CDF /* LazyProperty.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5C59ECE9189AC68B00645CDF /* LazyPropertyTests */ = {
+		5C59ED1E189BACC200645CDF /* LazyPropertyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5C59ECFE189AC68B00645CDF /* Build configuration list for PBXNativeTarget "LazyPropertyTests" */;
+			buildConfigurationList = 5C59ED2E189BACC200645CDF /* Build configuration list for PBXNativeTarget "LazyPropertyTests" */;
 			buildPhases = (
-				5C59ECE6189AC68B00645CDF /* Sources */,
-				5C59ECE7189AC68B00645CDF /* Frameworks */,
-				5C59ECE8189AC68B00645CDF /* Resources */,
+				5C59ED1B189BACC200645CDF /* Sources */,
+				5C59ED1C189BACC200645CDF /* Frameworks */,
+				5C59ED1D189BACC200645CDF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5C59ECF0189AC68B00645CDF /* PBXTargetDependency */,
+				5C59ED2D189BACC200645CDF /* PBXTargetDependency */,
 			);
 			name = LazyPropertyTests;
-			productName = LazyPropertyTests;
-			productReference = 5C59ECEA189AC68B00645CDF /* LazyPropertyTests.xctest */;
+			productName = "LazyProperty Tests";
+			productReference = 5C59ED1F189BACC200645CDF /* LazyPropertyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -255,7 +252,7 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Nicolas Goutaland";
 				TargetAttributes = {
-					5C59ECE9189AC68B00645CDF = {
+					5C59ED1E189BACC200645CDF = {
 						TestTargetID = 5C59ECCE189AC68B00645CDF;
 					};
 				};
@@ -273,7 +270,7 @@
 			projectRoot = "";
 			targets = (
 				5C59ECCE189AC68B00645CDF /* LazyProperty */,
-				5C59ECE9189AC68B00645CDF /* LazyPropertyTests */,
+				5C59ED1E189BACC200645CDF /* LazyPropertyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -289,13 +286,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5C59ECE8189AC68B00645CDF /* Resources */ = {
+		5C59ED1D189BACC200645CDF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C59ED1A189ACD0A00645CDF /* SimpleViewController.xib in Resources */,
-				5C59ED11189ACB0000645CDF /* RootViewController.xib in Resources */,
-				5C59ECF6189AC68B00645CDF /* InfoPlist.strings in Resources */,
+				5C59ED73189BAE3100645CDF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,24 +309,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5C59ECE6189AC68B00645CDF /* Sources */ = {
+		5C59ED1B189BACC200645CDF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C59ED07189AC72E00645CDF /* LazyProperty.m in Sources */,
-				5C59ECF8189AC68B00645CDF /* LazyPropertyTests.m in Sources */,
-				5C59ED18189ACD0A00645CDF /* SimpleViewController.m in Sources */,
-				5C59ED0F189ACB0000645CDF /* RootViewController.m in Sources */,
+				5C59ED31189BAD3800645CDF /* LazyPropertyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5C59ECF0189AC68B00645CDF /* PBXTargetDependency */ = {
+		5C59ED2D189BACC200645CDF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5C59ECCE189AC68B00645CDF /* LazyProperty */;
-			targetProxy = 5C59ECEF189AC68B00645CDF /* PBXContainerItemProxy */;
+			targetProxy = 5C59ED2C189BACC200645CDF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -453,7 +445,7 @@
 			};
 			name = Release;
 		};
-		5C59ECFF189AC68B00645CDF /* Debug */ = {
+		5C59ED2F189BACC200645CDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
@@ -464,7 +456,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LazyProperty/LazyProperty-Prefix.pch";
+				GCC_PREFIX_HEADER = "LazyPropertyTests/LazyPropertyTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -476,7 +468,7 @@
 			};
 			name = Debug;
 		};
-		5C59ED00189AC68B00645CDF /* Release */ = {
+		5C59ED30189BACC200645CDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
@@ -487,7 +479,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LazyProperty/LazyProperty-Prefix.pch";
+				GCC_PREFIX_HEADER = "LazyPropertyTests/LazyPropertyTests-Prefix.pch";
 				INFOPLIST_FILE = "LazyPropertyTests/LazyPropertyTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -516,14 +508,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5C59ECFE189AC68B00645CDF /* Build configuration list for PBXNativeTarget "LazyPropertyTests" */ = {
+		5C59ED2E189BACC200645CDF /* Build configuration list for PBXNativeTarget "LazyPropertyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5C59ECFF189AC68B00645CDF /* Debug */,
-				5C59ED00189AC68B00645CDF /* Release */,
+				5C59ED2F189BACC200645CDF /* Debug */,
+				5C59ED30189BACC200645CDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
