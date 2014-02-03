@@ -13,20 +13,21 @@
  */
 #define LAZY_PROPERTY_CUSTOM_SELECTOR(property, constructor, object) \
 - (id)property { \
-	static dispatch_once_t once; \
 _Pragma("clang diagnostic push") \
 _Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
     if (_ ## property) return _ ## property; \
-	dispatch_once(&once, ^{ \
-		_ ## property = [[classFromPropertyName(#property, [self class]) alloc] performSelector:(constructor ? constructor : @selector(init)) withObject:object]; \
+	@synchronized(self) { \
+		if (_ ## property == nil) { \
+			_ ## property = [[classFromPropertyName(#property, [self class]) alloc] performSelector:(constructor ? constructor : @selector(init)) withObject:object]; \
 \
-		NSString *propertyName = @#property;\
-		NSString *configureMethod = [@"configure" stringByAppendingString:[NSString stringWithFormat:@"%@%@", [[propertyName substringToIndex:1] uppercaseString], [propertyName substringFromIndex:1]]];\
-		SEL selector = NSSelectorFromString(configureMethod);\
+			NSString *propertyName = @#property;\
+			NSString *configureMethod = [@"configure" stringByAppendingString:[NSString stringWithFormat:@"%@%@", [[propertyName substringToIndex:1] uppercaseString], [propertyName substringFromIndex:1]]];\
+			SEL selector = NSSelectorFromString(configureMethod);\
 \
-		if ([self respondsToSelector:selector])\
-			[self performSelector:selector];\
-	}); \
+			if ([self respondsToSelector:selector])\
+				[self performSelector:selector];\
+		} \
+	} \
 _Pragma("clang diagnostic pop") \
     return _ ## property;\
 }
