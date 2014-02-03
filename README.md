@@ -12,7 +12,7 @@ Sometimes, you have to execute some code on property initialisation.
 More information on lazy instanciation [on Wikipedia](http://en.wikipedia.org/wiki/Lazy_instantiation)
 
 ##Usage
-* Declare a __strong nonatomic property__ for an __object type__
+* Declare a __strong property__ for an __object type__
   * @property (nonatomic, strong) 
 * Add one of these macros at the end of your file with property name, before end of class implementation __@end__
   * LAZY_PROPERTY(propertyName)
@@ -82,7 +82,7 @@ Let me know if you have some other use cases
 * Type less, do more
 * Reduce amount of typed code
 * Be focused on logic / business code instead of memory management
-* Split configuration code from logic code
+* Split configuration code from workflow
 * Perform fastidious initialisation in less lines of code
 * Reduce memory footprint, by not allocating unused objects
 
@@ -90,13 +90,12 @@ Let me know if you have some other use cases
 * Be careful, especially with UI Object, because initialisation will be on calling thread
 * Generated ivar will remain __nil__ until property is accessed once
 * You can directly access to generated __ivar__ (_propertyName), without triggering initialisation
-* Generated getters are assumed to be nonatomic (for now)
 * __init__ constructor is used by default
 * Don't add @synthesize on your code
 * Don't declare ivar
 
 ##Limitations
-Only __nonatomic__ __strong__ properties are supported.
+Only __strong__ properties are supported. Lazy __weak__ properties may instantiate a new instance at each call.
 
 ##Installation
 __Manual__: Copy the __Classes__ folder in your project<br>
