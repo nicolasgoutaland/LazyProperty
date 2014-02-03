@@ -27,6 +27,9 @@ const char * property_getTypeString(objc_property_t property)
 		return ( NULL );
 	
 	int len = (int)(e - attrs);
+	if (len >= sizeof(buffer))
+		return NULL;
+
 	memcpy( buffer, attrs, len );
 	buffer[len] = '\0';
 	
