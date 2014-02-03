@@ -98,6 +98,7 @@ Let me know if you have some other use cases
 Only __strong__ properties are supported. Lazy __weak__ properties may instantiate a new instance at each call.
 
 ##Installation
+__Cocoapods__: `pod 'LazyProperty'`<br>
 __Manual__: Copy the __Classes__ folder in your project<br>
 
 Import header in your project. .pch is a good place ;)
