@@ -23,6 +23,7 @@
 		5C59ED22189BACC200645CDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C59ECD6189AC68B00645CDF /* UIKit.framework */; };
 		5C59ED31189BAD3800645CDF /* LazyPropertyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C59ECF7189AC68B00645CDF /* LazyPropertyTests.m */; };
 		5C59ED73189BAE3100645CDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C59ECF4189AC68B00645CDF /* InfoPlist.strings */; };
+		5CAF847F18A12EEC004587F9 /* DummyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAF847E18A12EEC004587F9 /* DummyClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		5C59ED16189ACD0A00645CDF /* SimpleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleViewController.xib; sourceTree = "<group>"; };
 		5C59ED1F189BACC200645CDF /* LazyPropertyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPropertyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C59ED74189BAEDA00645CDF /* LazyPropertyTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LazyPropertyTests-Prefix.pch"; sourceTree = "<group>"; };
+		5CAF847D18A12EEC004587F9 /* DummyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyClass.h; sourceTree = "<group>"; };
+		5CAF847E18A12EEC004587F9 /* DummyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				5C59ECF7189AC68B00645CDF /* LazyPropertyTests.m */,
+				5CAF847D18A12EEC004587F9 /* DummyClass.h */,
+				5CAF847E18A12EEC004587F9 /* DummyClass.m */,
 				5C59ECF2189AC68B00645CDF /* Supporting Files */,
 			);
 			path = LazyPropertyTests;
@@ -314,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C59ED31189BAD3800645CDF /* LazyPropertyTests.m in Sources */,
+				5CAF847F18A12EEC004587F9 /* DummyClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import <UIKit/UIKit.h>
 #import "LazyProperty.h"
+#import "DummyClass.h"
 
 @interface LazyPropertyTests : XCTestCase
 // Data
@@ -20,14 +21,18 @@
 @property (nonatomic, strong) UIViewController *viewController;
 @property (nonatomic, strong) NSMutableArray *mutableArray;
 @property (nonatomic, strong) NSArray *arrayCustomSelector;
+@property (nonatomic, strong) DummyClass *dummyObject;
 @end
 
 @implementation LazyPropertyTests
-
+#pragma mark - Setup
 - (void)setUp
 {
     [super setUp];
-    
+
+    // testObjectDeallocation
+    XCTAssertTrue([DummyClass aliveDummyObjectsCount] == 0, @"No dummy object have to be alive");
+
     // Configure method not called
     _configureViewControllerTriggered = NO;
     _configureViewControllerTriggeredCount = 0;
@@ -35,6 +40,16 @@
     self.mutableArray = nil;
     self.invalidProperty = nil;
     self.arrayCustomSelector = nil;
+}
+
+- (void)tearDown
+{
+    [super tearDown];
+
+    // testObjectDeallocation
+    // If [DummyClass aliveDummyObjectsCount] isn't set to 0, a DummyObject is still alive
+    // We have to perform this test here because generated code with ARC add release messages at the end of the method scope.
+    XCTAssertTrue([DummyClass aliveDummyObjectsCount] == 0, @"No dummy object have to be alive");
 }
 
 #pragma mark - Test instanciation
@@ -110,6 +125,21 @@
     XCTAssertTrue(_arrayCustomSelector.count == 1, @"_arrayCustomSelector should have contains one object, beause using custom selector");
 }
 
+// Test object deallocation
+- (void)testObjectDeallocation
+{
+    // Trigger property
+    XCTAssertNil(_dummyObject, @"_dummyObject have to be nil");
+    [self.dummyObject respondsToSelector:@selector(init)];
+
+    XCTAssertNotNil(_dummyObject, @"_dummyObject have to be set");
+    XCTAssertTrue([DummyClass aliveDummyObjectsCount] == 1, @"One dummy object have to be alive");
+    self.dummyObject = nil;
+
+    // Trigger property
+    XCTAssertNil(_dummyObject, @"_dummyObject have to be nil");
+}
+
 #pragma mark - Configuration methods
 - (void)configureViewController
 {
@@ -120,5 +150,6 @@
 LAZY_PROPERTY(invalidProperty);
 LAZY_PROPERTY(viewController);
 LAZY_PROPERTY(mutableArray);
+LAZY_PROPERTY(dummyObject);
 LAZY_PROPERTY_CUSTOM_SELECTOR(arrayCustomSelector, @selector(initWithArray:), @[@(YES)]);
 @end
