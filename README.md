@@ -12,7 +12,7 @@ Sometimes, you have to execute some code on property initialisation.
 More information on lazy instanciation [on Wikipedia](http://en.wikipedia.org/wiki/Lazy_instantiation)
 
 ##Usage
-* Declare a __strong property__ for an __object type__
+* Declare a __strong nonatomic property__ for an __object type__
   * @property (nonatomic, strong) 
 * Add one of these macros at the end of your file with property name, before end of class implementation __@end__
   * LAZY_PROPERTY(propertyName)
@@ -96,6 +96,8 @@ Let me know if you have some other use cases
 
 ##Limitations
 Only __strong__ properties are supported. Lazy __weak__ properties may instantiate a new instance at each call.
+__atomic__ properties are not supported. When overriding __atomic__ properties, you have to override getter and setter. 
+Using LazyProperty on an atomic property will result in compiler a warning message.
 
 ##Installation
 __Cocoapods__: `pod 'LazyProperty'`<br>

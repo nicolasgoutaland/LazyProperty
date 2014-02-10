@@ -10,12 +10,13 @@
 #import "LazyProperty.h"
 #import <objc/runtime.h>
 
-#define NONATOMIC_TAG @",N,"
-
 #pragma mark Private
 // SRC : https://github.com/AlanQuatermain/aqtoolkit
 // DOC : https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtPropertyIntrospection.html#//apple_ref/doc/uid/TP40008048-CH101-SW5
+
 /* Return the type type of a given property */
+const char * property_getTypeString(objc_property_t property);
+
 const char * property_getTypeString(objc_property_t property)
 {
 	const char * attrs = property_getAttributes( property );
