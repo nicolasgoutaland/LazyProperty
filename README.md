@@ -110,7 +110,7 @@ Import header in your project. .pch is a good place ;)
     #import "LazyProperty.h"
 
 ##Versions
-1.0 : Initial release
+1.0 : Initial release<br/>
 1.1 : Added some tests, triggered method can have a parameter, removed __@synchronized__ from generated getter
 
 ##Team
