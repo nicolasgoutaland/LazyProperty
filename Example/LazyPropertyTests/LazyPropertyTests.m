@@ -21,7 +21,9 @@
 @property (nonatomic, strong) UIViewController *viewController;
 @property (nonatomic, strong) NSMutableArray *mutableArray;
 @property (nonatomic, strong) NSArray *arrayCustomSelector;
+@property (nonatomic, strong) NSArray *arrayCustomSelectorAndParameter;
 @property (nonatomic, strong) DummyClass *dummyObject;
+@property (nonatomic, strong) DummyClass *dummyObjectWithParameter;
 @end
 
 @implementation LazyPropertyTests
@@ -140,7 +142,23 @@
     XCTAssertNil(_dummyObject, @"_dummyObject have to be nil");
 }
 
+// Test method triggering and parameter
+- (void)testArrayCustomSelectorAndParameter
+{
+    // Trigger property
+    XCTAssertNil(_arrayCustomSelectorAndParameter, @"_arrayCustomSelectorAndParameter have to be nil");
+    [self.arrayCustomSelectorAndParameter respondsToSelector:@selector(init)];
+    
+    XCTAssertNotNil(_arrayCustomSelectorAndParameter, @"_arrayCustomSelectorAndParameter have to be set");
+    XCTAssertTrue(_arrayCustomSelectorAndParameter.count == 1, @"_arrayCustomSelectorAndParameter should have contains one object, beause using custom selector");
+}
+
 #pragma mark - Configuration methods
+- (void)configureArrayCustomSelectorAndParameter:(NSArray *)parameterArray
+{
+    XCTAssertNotNil(parameterArray, @"parameterArray have to be set");
+}
+
 - (void)configureViewController
 {
     _configureViewControllerTriggered = YES;
@@ -152,4 +170,5 @@ LAZY_PROPERTY(viewController);
 LAZY_PROPERTY(mutableArray);
 LAZY_PROPERTY(dummyObject);
 LAZY_PROPERTY_CUSTOM_SELECTOR(arrayCustomSelector, @selector(initWithArray:), @[@(YES)]);
+LAZY_PROPERTY_CUSTOM_SELECTOR(arrayCustomSelectorAndParameter, @selector(initWithArray:), @[@(YES)]);
 @end

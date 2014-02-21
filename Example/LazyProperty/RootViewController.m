@@ -54,6 +54,16 @@
     _simpleViewControllerCustomSelector.view.backgroundColor = [UIColor redColor];
 }
 
+// This methods will be autotriggered when embeddedNavigationController will be instantiated
+// Parameter will be object set as third "object" in LAZY_PROPERTY_CUSTOM_SELECTOR macro (self.simpleViewControllerEmbedded in this case)
+- (void)configureEmbeddedNavigationController:(SimpleViewController *)aSimpleViewController
+{
+    // This methods will be called only once, so you can perform initial configuration here
+    // You can also  define a - (void)configureSimpleViewControllerEmbedded method in order to configure simpleViewController, but using
+    // it as parameter allows you to write less code
+    aSimpleViewController.view.backgroundColor = [UIColor yellowColor];
+}
+
 LAZY_PROPERTY(simpleViewController);
 LAZY_PROPERTY(simpleViewControllerEmbedded);
 LAZY_PROPERTY_CUSTOM_SELECTOR(simpleViewControllerCustomSelector, @selector(initWithInitialCount:), @(999));

@@ -19,6 +19,8 @@ More information on lazy instanciation [on Wikipedia](http://en.wikipedia.org/wi
   * LAZY_PROPERTY_CUSTOM_SELECTOR(propertyName, @selector(customSelectorName:), @[@"parameter"])
 * Optionally declare autotriggered methods. Auto triggered methods are named after property name, camelcase style, prefixed by __configure__
   * - (void)configurePropertyName ...
+* Triggered method can take an optional parameter, that is the object parameter of LAZY_PROPERTY_CUSTOM_SELECTOR macro.
+  * - (void)configurePropertyName:(MyParameter *)aParameter ...
 
 ##Example
 _RootViewController.m_
@@ -106,6 +108,10 @@ __Manual__: Copy the __Classes__ folder in your project<br>
 Import header in your project. .pch is a good place ;)
     
     #import "LazyProperty.h"
+
+##Versions
+1.0 : Initial release
+1.1 : Added some tests, triggered method can have a parameter, removed __@synchronized__ from generated getter
 
 ##Team
 Nicolas Goutaland
