@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LazyProperty"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.summary      = "One line lazy property definition, with auto triggering, custom selectors"
 
   s.description  = <<-DESC
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/nicolasgoutaland/LazyProperty"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "nicolasgoutaland" => "nicolas.goutaland@gmail.com" }
-  s.source       = { :git => "https://github.com/nicolasgoutaland/LazyProperty.git", :tag => "1.0.0" }
+  s.source       = { :git => "https://github.com/nicolasgoutaland/LazyProperty.git", :tag => "1.1.0" }
   s.source_files  = 'Classes', 'Classes/**/*.{h,m}'
   s.exclude_files = 'Classes/Exclude'
   s.requires_arc = true
