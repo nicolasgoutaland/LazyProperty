@@ -9,7 +9,7 @@ Dealing with lazy properties can be cumbersome sometimes, copy/pasting same code
 This code can be disturbing when reading source file.<br/>
 Sometimes, you have to execute some code on property initialisation.
 
-More information on lazy instanciation [on Wikipedia](http://en.wikipedia.org/wiki/Lazy_instantiation)
+More information on lazy instantiation [on Wikipedia](http://en.wikipedia.org/wiki/Lazy_instantiation)
 
 ##Usage
 * Declare a __strong nonatomic property__ for an __object type__
