@@ -102,7 +102,7 @@ __atomic__ properties are not supported. When overriding __atomic__ properties, 
 Using LazyProperty on an atomic property will result in compiler a warning message.
 
 ##Installation
-__Cocoapods__: `pod 'LazyProperty'`<br>
+__CocoaPods__: `pod 'LazyProperty'`<br>
 __Manual__: Copy the __Classes__ folder in your project<br>
 
 Import header in your project. .pch is a good place ;)
