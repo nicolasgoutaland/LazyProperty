@@ -2,7 +2,7 @@
 
 One line lazy property definition, with auto triggering, custom selectors
 
-ARC only, XCode 4.4 minimum (For auto synthesized properties)
+ARC only, Xcode 4.4 minimum (For auto synthesized properties)
 
 ##Description
 Dealing with lazy properties can be cumbersome sometimes, copy/pasting same code again and again.<br/>
